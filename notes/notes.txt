@@ -1,0 +1,39 @@
+Comprehensive Rust Training Ground - notes.
+  1. Stuff to check later.
+    - Build Scripts --> https://doc.rust-lang.org/cargo/reference/build-scripts.html
+    - Workspaces    --> https://doc.rust-lang.org/cargo/reference/workspaces.html
+    - Macro rules   --> what are those? https://doc.rust-lang.org/rust-by-example/macros.html
+    - Procedural macros --> https://doc.rust-lang.org/reference/procedural-macros.html
+    - It all boils down to learning how to properly use, implement and understand AST (Abstract Syntax Trees)
+    - proc_macro crate --> check it out: https://doc.rust-lang.org/proc_macro/index.html
+    - let mut --> what does it even mean? --> https://doc.rust-lang.org/std/keyword.mut.html
+    - String class object --> https://doc.rust-lang.org/std/string/struct.String.html
+    - format! macro --> https://doc.rust-lang.org/std/macro.format.html
+    - std::fmt --> standard library function for output formatting --> https://doc.rust-lang.org/std/fmt/index.html
+      - usefull for nice unix/C like formatting off output which I like very much
+    - Types/Structs --> https://doc.rust-lang.org/beta/book/ch05-01-defining-structs.html
+    - Small string optimization --> https://pvs-studio.com/en/blog/terms/6658/
+    - Generating structs dynamically at compiletime --> https://stackoverflow.com/questions/72841694/how-do-you-generate-a-struct-dynamically-at-compile-time-in-rust
+    - Study Option for some functional rep --> https://doc.rust-lang.org/stable/std/option/enum.Option.html
+    - Generic stuff about Types --> https://doc.rust-lang.org/stable/reference/types.html
+    - Type aliasing is usefule for complex types: type PlayerInventory = RwLock<Vec<Arc<RefCell<Item>>>>; as an example
+
+  2. Ideas for training Rust projects
+    - Concatenative Language Deque Compiler --> deque (personal idea)
+    - AST libraries for rust --> ast-rust (personal idea)
+
+  3. Training idea - incorporate stuff from the guide into your own project
+    - Trade Engine --> The stuff you think about when trying to implement clone of patrician game
+      - Economy Engine --> commodities/markets/moving stuff around, populations and so on
+  
+  4. Freeform notes
+  --> Pattern 2: ($($arg:tt)*) => { ... }; // Explained by ChatGPT
+
+    This is the more commonly used form, where println! takes arguments and formats them.
+
+        $($arg:tt)*: This pattern represents a variadic, token-tree matcher.
+            $arg:tt: This captures a single argument, where tt stands for "token tree". A token tree can match almost any kind of Rust expression or statement.
+            $($arg:tt)*: This allows for capturing multiple arguments (using the * operator, which means "zero or more").
+
+  --> https://palant.info/2023/04/17/processing-a-complex-syntax-with-rusts-declarative-macros/
+  --> https://doc.rust-lang.org/std/primitive.str.html <-- Primitive string, so just a data somewhere without OOP stuff
