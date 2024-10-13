@@ -17,6 +17,8 @@ Comprehensive Rust Training Ground - notes.
     - Study Option for some functional rep --> https://doc.rust-lang.org/stable/std/option/enum.Option.html
     - Generic stuff about Types --> https://doc.rust-lang.org/stable/reference/types.html
     - Type aliasing is usefule for complex types: type PlayerInventory = RwLock<Vec<Arc<RefCell<Item>>>>; as an example
+    - Rust attributes --> https://doc.rust-lang.org/reference/attributes.html
+    - Struct destructuring by matching --> https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring.html
 
   2. Ideas for training Rust projects
     - Concatenative Language Deque Compiler --> deque (personal idea)

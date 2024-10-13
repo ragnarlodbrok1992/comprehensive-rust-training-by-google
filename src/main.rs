@@ -26,18 +26,32 @@ fn build_version_string(array: [i32;6]) -> String {
 //               Market (1 per port)
 //               Population - integer number
 #[derive(Debug)]
-enum Commodity_Group {}
+enum Commodity_Group {
+    // Do not mix those!
+    // HARD
+
+    // SERVICE
+}
 
 #[derive(Debug)]
-enum Commodity_Type {}
+enum Commodity_Type {
+    HARD,
+    SERVICE,
+}
 
-struct Commodity {}
+struct Commodity {
+    name: Box<str>, // TODO learn about Boxes
+    commodity_group: Commodity_Group,
+    commodity_type: Commodity_Type,
+}
+
+struct World {}
 
 struct Market {}
 
 struct Port {}
 
-struct World {}
+struct City {}
 
 
 struct PARAMETERS {}
