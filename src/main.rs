@@ -29,8 +29,19 @@ fn build_version_string(array: [i32;6]) -> String {
 enum Commodity_Group {
     // Do not mix those!
     // HARD
+    Agriculture,
+    Marine, // Provided by oceans and seas
+    Development, // Building materials
+    Mining, // Provided by mining
+    Forestry, // Provided by forestry (mostly wood)
+    Energy,
+    Luxury,
 
     // SERVICE
+    Education, // Provides means to move up the pops and to use more sophisticated commodities
+    Healthcare,
+    Religion,
+    Trade, // Infrastructure and means to move goods around
 }
 
 #[derive(Debug)]
@@ -53,6 +64,7 @@ struct Port {}
 
 struct City {}
 
+struct Population {}
 
 struct PARAMETERS {}
 
